@@ -58,7 +58,5 @@ curl -X POST http://127.0.0.1:5000/predict -H "Content-Type: application/json" -
 - The script handles basic error checking, but for optimal usage, ensure your input follows the expected format.
 - If the text field is empty or improperly formatted, the API will return an error response.
 - The model was trained on a dataset containing labeled messages (spam and not spam), so predictions are based on patterns in that dataset. If you get unexpected results, consider re-training the model with a more diverse set of examples.
-- The model should work in real-time, but ensure the server is running (python app.py) before making requests.
-- The script handles basic error checking, but for optimal usage, ensure your input follows the expected format.
-
+- The model should work in real-time, but ensure the server is running {python (app.py)} before making requests.
 
