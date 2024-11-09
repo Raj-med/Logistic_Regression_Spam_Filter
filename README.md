@@ -46,16 +46,19 @@ curl -X POST http://127.0.0.1:5000/predict -H "Content-Type: application/json" -
 
 
 ## NOTES
-Ensure your system is properly configured with the required dependencies (Flask, scikit-learn, pickle, etc.).
-The model uses text input for prediction. Make sure the text provided in the request body is clear and properly formatted.
-Adjust the paths in the script to point to your locally saved model (model.pkl) and vectorizer (vectorizer.pkl) files.
-The script expects a POST request with JSON data containing a text field. For example:
-{
-  "text": "Free money! Click here to claim your prize."
-}
-If the text field is empty or improperly formatted, the API will return an error response.
-The model was trained on a dataset containing labeled messages (spam and not spam), so predictions are based on patterns in that dataset. If you get unexpected results, consider re-training the model with a more diverse set of examples.
-The model should work in real-time, but ensure the server is running (python app.py) before making requests.
-The script handles basic error checking, but for optimal usage, ensure your input follows the expected format.
+- Ensure your system is properly configured with the required dependencies (Flask, scikit-learn, pickle, etc.).
+- The model uses text input for prediction. Make sure the text provided in the request body is clear and properly formatted.
+- Adjust the paths in the script to point to your locally saved model (`model.pkl`) and vectorizer (`vectorizer.pkl`) files.
+- The script expects a POST request with JSON data containing a text field. For example:
+  ```json
+  {
+    "text": "Free money! Click here to claim your prize."
+  }
+
+- The script handles basic error checking, but for optimal usage, ensure your input follows the expected format.
+- If the text field is empty or improperly formatted, the API will return an error response.
+- The model was trained on a dataset containing labeled messages (spam and not spam), so predictions are based on patterns in that dataset. If you get unexpected results, consider re-training the model with a more diverse set of examples.
+- The model should work in real-time, but ensure the server is running (python app.py) before making requests.
+- The script handles basic error checking, but for optimal usage, ensure your input follows the expected format.
 
 
